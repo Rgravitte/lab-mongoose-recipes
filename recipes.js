@@ -12,7 +12,8 @@ const recipeSchema = new Schema()({
   created : {type: Date, default: new Date()}
 })
 
-const Recipes = mongoose.model('Recipes', recipeSchema);
+const Recipe = mongoose.model('Recipes', recipeSchema);
 
+const pastaRecipe = new Recipe({title: "Pasta with meatballs"}, {level: "easy peasy"}, {cuisine: "fjkdlsa"}, {dishType: "Other"}, {duration: {min: 20}}, {creator: "Ross"});
 module.exports(Recipes);
 
